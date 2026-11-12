@@ -1,0 +1,12 @@
+{
+ "https://data.sec.gov/submissions/CIK0000320193.json": "submissions/CIK0000320193.json",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm": "docs/000032019324000123/aapl-20240928.htm",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/index.json": "docs/000032019324000123/index.json",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628.htm": "docs/000032019325000073/aapl-20250628.htm",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/index.json": "docs/000032019325000073/index.json",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/aapl-20251030.htm": "docs/000032019325000077/aapl-20251030.htm",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/index.json": "docs/000032019325000077/index.json",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm": "docs/000032019325000079/aapl-20250927.htm",
+ "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/index.json": "docs/000032019325000079/index.json",
+ "https://www.sec.gov/files/company_tickers.json": "company_tickers.json"
+}
