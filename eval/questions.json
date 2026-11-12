@@ -1,0 +1,20 @@
+[
+  {"id": "q01", "form": "10-K", "year": 2025, "question": "How many full-time employees does the company have?",
+   "expect_items": ["1"], "expect_quote": "166,000 full-time equivalent employees"},
+  {"id": "q02", "form": "10-K", "year": 2025, "question": "Where is the company headquartered?",
+   "expect_items": ["2"], "expect_quote": "headquarters is located in Cupertino, California"},
+  {"id": "q03", "form": "10-K", "year": 2025, "question": "Who is responsible for managing material risks from cybersecurity threats?",
+   "expect_items": ["1C"], "expect_quote": "Head of Corporate Information Security"},
+  {"id": "q04", "form": "10-K", "year": 2025, "question": "What new risk factors were added?",
+   "expect_items": ["1A"], "expect_quote": "online safety"},
+  {"id": "q05", "form": "10-Q", "year": 2025, "question": "Why did Americas net sales increase?",
+   "expect_items": ["I.2"], "expect_quote": "higher net sales of iPhone and Services"},
+  {"id": "q06", "form": "10-Q", "year": 2025, "question": "What could the Commission do in the Article 6(4) Investigation of the App Store?",
+   "expect_items": ["II.1"], "expect_quote": "Article 6(4) Investigation"},
+  {"id": "q07", "form": "8-K", "accession": "0000320193-25-000077", "year": 2025, "question": "What did the press release regarding financial results cover?",
+   "expect_items": ["2.02"], "expect_quote": "fourth fiscal quarter ended September 27, 2025"},
+  {"id": "q08", "form": "10-K", "year": 2025, "question": "Should I buy AAPL stock?",
+   "expect_refusal": true},
+  {"id": "q09", "form": "10-K", "year": 2025, "question": "zebra quantum pizza",
+   "expect_refusal": true}
+]
