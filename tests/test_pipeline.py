@@ -21,7 +21,20 @@ def test_intent_detectors():
     assert not is_novelty_question("What are the risk factors?")
     assert is_advice_request("Should I buy AAPL?")
     assert is_advice_request("what's your price target")
+    assert is_advice_request("Is Apple a sell right now?")
+    assert is_advice_request("Is this a good investment?")
+    assert is_advice_request("Tell me whether to go long AAPL this quarter.")
+    assert is_advice_request("Would you short NVDA?")
+    assert is_advice_request("What call options should I buy on AAPL?")
+    assert is_advice_request("Is AAPL a hold?")
+    assert is_advice_request("Should I go short TSLA?")
+    assert is_advice_request("Would you short NVDA?")
     assert not is_advice_request("What drove net sales?")
+    assert not is_advice_request("What new risk factors were added?")
+    assert not is_advice_request("Describe the company's long-term debt.")
+    assert not is_advice_request("What investments does the company hold?")
+    assert not is_advice_request("Why might the company sell products in China?")
+    assert not is_advice_request("How many full-time employees does the company have?")
 
 
 def test_sentences_respect_abbreviations():
@@ -66,6 +79,17 @@ def test_refuses_advice(tenk_2025):
     res = ask("Should I buy AAPL stock?", tenk_2025, MockBackend())
     assert isinstance(res, Refusal)
     assert "investment advice" in res.reason
+
+
+def test_refuses_advice_sell_investment_and_go_long(tenk_2025):
+    for question in (
+        "Is Apple a sell right now?",
+        "Is this a good investment?",
+        "Tell me whether to go long AAPL this quarter.",
+    ):
+        res = ask(question, tenk_2025, MockBackend())
+        assert isinstance(res, Refusal), question
+        assert "investment advice" in res.reason
 
 
 class HallucinatingBackend:
