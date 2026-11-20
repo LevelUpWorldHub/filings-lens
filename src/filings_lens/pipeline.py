@@ -44,8 +44,21 @@ def infer_items(question: str, form: str) -> list[str]:
 
 
 ADVICE = re.compile(
-    r"\b(should i (buy|sell|short|hold|invest)|buy or sell|price target|"
-    r"is it a (good|bad) (buy|investment)|recommend(ation)? (to )?(buy|sell)|place an? (order|trade))\b",
+    r"(?x)\b("
+    r"should\ i\s+(?:(?:to|please|just)\s+)?(?:buy|sell|short|hold|invest|long|go\s+long|go\s+short)"
+    r"|would\s+you\s+(?:(?:please|just)\s+)?(?:buy|sell|short|hold|invest|go\s+long|go\s+short)"
+    r"|whether\s+to\s+(?:buy|sell|short|hold|invest|go\s+long|go\s+short|long|short)"
+    r"|buy\s+or\s+sell"
+    r"|price\s+target"
+    r"|is\s+it\s+a\s+(?:good|bad)\s+(?:buy|sell|investment)"
+    r"|is\s+this\s+a\s+(?:good|bad)\s+(?:buy|sell|investment)"
+    r"|is\s+[a-z0-9.$\-]{1,20}\s+a\s+(?:buy|sell|short|hold)\b"
+    r"|recommend(?:ation)?(?:\s+to)?\s+(?:buy|sell|short|hold)"
+    r"|go\s+(?:long|short)\b"
+    r"|(?:good|bad)\s+investment\b"
+    r"|place\s+an?\s+(?:order|trade)"
+    r"|should\s+i\b.{0,60}\b(?:call|put)\s+options?"
+    r")",
     re.I,
 )
 
